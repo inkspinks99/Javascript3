@@ -58,6 +58,5 @@ $(document).on("click", ".edit", function () {
 });
 
 $(document).on("click", "p", function () {
-  var text = $(this).closest("ul").find("p");
-  text.toggleClass("line-through");
+  $(this).toggleClass("line-through");
 });
