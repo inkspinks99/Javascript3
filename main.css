@@ -1,0 +1,173 @@
+:root {
+    --dark: #955e59;
+    --lighter: #884752;
+    --darker: #884752;
+    --white2: #703b44;
+    --light: white;
+    --beige: white;
+    --white: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family:  'serif';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: #EEE;
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--white2);
+    margin-bottom: 1rem;
+    font-weight: bold;
+    padding-top: 100px;
+    text-align: center;
+}
+
+#new-task-form {
+    display: flex;
+    width: 875px;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-input {
+    flex: 1 1 0%;
+    background-color: var(--lighter);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+
+#new-task-input::placeholder {
+    color: var(--beige);
+}
+
+#new-task-submit {
+    color: var(--beige);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--beige),
+    var(--white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+    display: block;
+    border-radius: 0.5rem;
+    box-shadow: var(--beige);
+}
+
+#new-task-submit:hover {
+    opacity: 0.8;
+}
+
+#new-task-submit:active {
+    opacity: 0.6;
+}
+
+main {
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white2);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content {
+    flex: 1 1 0%;
+}
+
+p {
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+p:not(:read-only) {
+    color: var(--beige);
+    border: 0px;
+    outline: 0px;
+}
+
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.task .actions .edit {
+    background-image: linear-gradient(to right, var(--beige),
+    var(--white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+    color: #583e3e;
+}
+
+.line-through {
+    text-decoration: line-through;
+    text-decoration-color: #884752;
+    text-decoration-thickness: 2px;
+}
+
+#githubLogo {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 100px;
+    width: 100px;
+}
