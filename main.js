@@ -39,7 +39,7 @@ $(document).on("click", ".delete", function () {
 
 $(document).on("click", ".edit", function () {
   var buttonText = $(this);
-  var text = $(this).closest("ul").find("p");
+  var text = $(this).closest(".task").find("p");
   if (buttonText.text() == "EDIT") {
     text.prop("contenteditable", true).focus();
     buttonText.text("SAVE");
